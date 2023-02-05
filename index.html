@@ -64,5 +64,36 @@
             </tr>
 
         </table>
+
+        <hr>
+
+        <h2>Code Snippets</h2>
+        <blockquote cite="https://stackoverflow.com/questions/75354479/generation-of-random-numbers-math-random">const randomNumber = Math.floor(Math.random()*10));
+            Generates a random number, then assigns that random number to randomNumber.
+            
+            randomNumber is a constant variable (meaning its value cannot be changed after the fact).
+            
+            You're generating one random number, then saving it in a variable.
+            
+            function randomNum () {return Math.floor(Math.random()*10));}
+            Defines a function that returns a random number when called.
+            
+            Each invocation of randomNum generates a new random number.</blockquote>
+        <a href="https://stackoverflow.com/questions/75354479/generation-of-random-numbers-math-random">Link to question.</a>
+        <pre>const array = [1, 1, 1, 3, 3, 2, 2];
+
+            // Method 1: Using a Set
+            const unique = [...new Set(array)];
+            
+            // Method 2: Array.prototype.reduce
+            const unique = array.reduce((result, element) => {
+              return result.includes(element) ? result : [...result, element];
+            }, []);
+            
+            // Method 3: Array.prototype.filter
+            const unique = array.filter((element, index) => {
+              return array.indexOf(element) === index;
+            });</pre>    
+
     </body>
 </html>
